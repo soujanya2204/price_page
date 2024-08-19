@@ -89,7 +89,7 @@ input:checked + .slider:before {
   margin: 20px;
   width: 300px;
   padding-bottom: 6.5em;
-  height: 170px;
+  height: 220px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
