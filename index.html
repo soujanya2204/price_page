@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing cards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+        <div class="toggle-btn">
+          <span style="margin: 0.8em">Annually</span>
+          <label class="switch">
+            <input type="checkbox" id="checkbox" onclick="check()" />
+            <span class="slider round"></span>
+          </label>
+          <span style="margin: 0.8em">Monthly</span>
+        </div>
+      </div>
+      <div class="package-container">
+        <div class="packages">
+          <h1 class="first">Basic</h1>
+          <h2 class="text1">$9.99</h2>
+          <h2 class="text2">$119.9</h2>
+          <ul class="list">
+            <li>2000 subscribers</li>
+            <li>12,000 emails/month</li>
+            <li>Multi-user Accounts</li>
+            <li>Email Support</li>
+          </ul>
+          <a href="#" class="button">Start now </a>
+        </div>
+        <div class="packages">
+          <h1 class="first">Professional</h1>
+          <h2 class="text1">$19.99</h2>
+          <h2 class="text2">$239.99</h2>
+          <ul class="list">
+            <li>Basic +</li>
+            <li>Landing Pages</li>
+            <li>Pop-up forms</li>
+            <li>Premium support</li>
+          </ul>
+          <a href="#" class="button">Start Now</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      function check() {
+        var checkbox = document.getElementById("checkbox");
+        var text1 = document.getElementsByClassName("text1");
+        var text2 = document.getElementsByClassName("text2");
+        if (checkbox.checked == true) {
+          for (var i = 0; i < text1.length; i++) {
+            text1[i].style.display = "block";
+            text2[i].style.display = "none";
+          }
+        } else {
+          for (var i = 0; i < text1.length; i++) {
+            text1[i].style.display = "none";
+            text2[i].style.display = "block";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

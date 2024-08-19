@@ -1,0 +1,145 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1e2321;
+  transform: translate(0px, 0px);
+  transition: 0.6s ease transform, 0.6s box-shadow;
+}
+
+.slider:before {
+  position: absolute;
+  content: " ";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #00cc99;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #50bfe6;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50px;
+}
+
+.package-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.packages {
+  margin: 20px;
+  width: 300px;
+  padding-bottom: 6.5em;
+  height: 170px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  border: 10px solid rgb(103, 183, 150);
+  box-shadow: 2px 6px 5px;
+  color: black;
+}
+
+.first {
+  color: rgb(66, 202, 170);
+}
+
+h1,
+h2 {
+  font-size: 2.2em;
+  margin: 10px 0;
+}
+
+.list li {
+  font-size: 20px;
+  list-style: none;
+  border-bottom: 1px solid #f4f4f4;
+  padding-inline-start: 0;
+  border-width: 1px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+.button {
+  padding: 10px 30px;
+  font-size: 1.4em;
+  margin: 15px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #00cc99;
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 #00cc99 inset, 0 0 5px 1px #00cc99;
+  transition: transform 0.3s;
+}
+
+.button:hover {
+  background-color: #00cc99;
+  color: #fff;
+  transform: scale(1.1);
+}
